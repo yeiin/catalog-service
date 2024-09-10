@@ -2,7 +2,7 @@ package com.polarbookshop.catalog_service.web;
 
 import com.polarbookshop.catalog_service.domain.Book;
 import com.polarbookshop.catalog_service.domain.BookService;
-import jakarta.validation.Valid;
+import javax.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
