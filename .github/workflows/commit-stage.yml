@@ -2,19 +2,11 @@ name: Commit Stage
 on:
   push:
     branches:
-          - main
-  pull_request:
-    branches:
       - main
-  workflow_dispatch:
-
-jobs:
-  build:
-    name: Build and Test
-    runs-on: ubuntu-22.04
-    permissions:
-name: Commit Stage
-on: push
+    pull_request:
+      branches:
+        - main
+    workflow_dispatch:
 
 jobs:
   build:
@@ -47,4 +39,4 @@ jobs:
         uses: github/codeql-action/upload-sarif@v3
         if: success() || failure()
         with:
-          sarif_file: ${{ steps.scan.outputs.sarif }}d
+          sarif_file: ${{ steps.scan.outputs.sarif }}
