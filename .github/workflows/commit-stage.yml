@@ -11,7 +11,6 @@ jobs:
     name: Build and Test
     runs-on: ubuntu-22.04
     permissions:
-      actions: read
       contents: read
       security-events: write
     steps:
@@ -79,6 +78,6 @@ jobs:
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.CR_PAT }}
       - name: Publish container image
         run: docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
