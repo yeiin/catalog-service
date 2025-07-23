@@ -35,6 +35,7 @@ public record Book(
         Double price,
 
         String publisher,
+
         @CreatedDate
         Instant createdDate,
 

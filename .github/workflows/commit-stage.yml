@@ -11,7 +11,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: polarbookshop/catalog-service
+  IMAGE_NAME: yeiin/catalog-service
   VERSION: latest
 
 jobs:
